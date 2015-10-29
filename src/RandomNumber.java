@@ -32,11 +32,26 @@ public class RandomNumber {
 			
 		}
 
-		public int GetANumber()
+		/*public int GetANumber()
 		
 		{
 			int random = lowest + (int) (Math.random()*((highest-lowest)+1));
 			return random;
+		}
+		*/
+	
+		//lab5
+		
+		public RandomNumber(int high){
+			
+		highest = high;	
+		}
+		
+		public int GetANumber()
+		{
+			int random = (int) (Math.random()*highest);
+			return random;
+			
 		}
 
 		

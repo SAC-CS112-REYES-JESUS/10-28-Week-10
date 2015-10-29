@@ -14,8 +14,8 @@ public class GuessANumber {
 	int even=0;
 	int odd=0;
 	int win = 0;
-	int high = 0;
-	int lo=0;
+	int low;
+	int high;
 	
 	RandomNumber myGame = new RandomNumber();//my class!!!!!!!!!!!!!!!!!!!
 	
@@ -23,12 +23,16 @@ public class GuessANumber {
 	for(int i=0;i < winArray.length;i++){
 			Scanner input = new Scanner(System.in);
 			
-			System.out.println("Set the range x-x");
-			lo = input.nextInt();
-			high = input.nextInt();	
-			int genNumber =myGame.GetANumber(lo,high);
+			System.out.println("Set the range lowest possible number");
+			low = input.nextInt();
+			myGame.setLowNumber(low);
+			
+			System.out.println("Set the range for the highes possible number");
+			high=input.nextInt();
+			myGame.setHighNumber(high);
+			int genNumber =myGame.GetANumber();
 		
-		 System.out.printf("Is the number between %d-%d  odd(1) or even(2)?\n",lo,high);		 
+		 System.out.printf("Is the number between %d-%d  odd(1) or even(2)?\n",low,high);		 
 		 int choice = input.nextInt();
 
 		 System.out.printf("number is: %d\n", genNumber);//check 
@@ -64,7 +68,7 @@ public class GuessANumber {
 				  }
 		 
 		
-		System.out.println("Remeber 0: Wrong, 1: odd , 2: even");
+		System.out.println("Remember 0: Wrong, 1: odd , 2: even");
 		for(int i=0;i < winArray.length;i++){
 		 System.out.printf(" For %d round\nThe computer choose %d you guess %d\n ",i+1,compArray[i],winArray[i]); 
 		}

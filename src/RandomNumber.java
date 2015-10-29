@@ -32,28 +32,52 @@ public class RandomNumber {
 			
 		}
 
-		/*public int GetANumber()
+		/*lab4
+		 public int GetANumber()
 		
 		{
 			int random = lowest + (int) (Math.random()*((highest-lowest)+1));
 			return random;
 		}
 		*/
-	
-		//lab5
-		
+
 		public RandomNumber(int high){
 			
 		highest = high;	
 		}
 		
+		/*lab5
 		public int GetANumber()
 		{
 			int random = (int) (Math.random()*highest);
-			return random;
-			
+			return random;	
 		}
-
+		*/
+		
+		//lab6
+		
+		public RandomNumber(int lo,int high){
+			
+			highest = high;	
+			lowest = lo;
+		}
+		
+		public int GetANumber(){
+			int random = lowest+ (int) (Math.random()*((highest -lowest)+1));
+			return random;	
+		}
+		
+		
+		public int GetLowNumber(){
+			return lowest;
+		}
+		
+		public int GetHighNumber(){
+			return highest;
+		}
+		
+		
+		
 		
 		
 }

@@ -28,15 +28,14 @@ public class GuessANumber {
 		 System.out.printf("number is: %d\n", genNumber);//check 
 		 
 		 compArray[i]= genNumber;//good comp number
-		 
 		  
 		 //guess odd or eve
 			 if((choice%2 ==0)){
 				evenArray[i] = 2; 
-				even = 1+ even;
+				even +=1;
 			 }
 			 else{oddArray[i]= 1; 
-			 odd = odd+1;}
+			 odd +=1;}
 			
 	
 			 //guess correct
@@ -44,16 +43,18 @@ public class GuessANumber {
 			 {
 				 winArray[i] =2;
 				 System.out.println("Correct");
-				 win= win+1;
+				 win+=1;
 			 }
 			 else if(!(genNumber %2==0) && !(choice %2==0))
 			 {
 				 System.out.println("Choose odd, correct,");
 			 	winArray[i] =1;
-			 	win= win+1;
+			 	win+=1;
 			 }
 			 else
 				 System.out.println("sorry wrong");
+			 loseArray[i]=1;
+			 
 				  }
 		 
 		

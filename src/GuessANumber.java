@@ -14,15 +14,21 @@ public class GuessANumber {
 	int even=0;
 	int odd=0;
 	int win = 0;
-	
+	int high = 0;
 	
 	RandomNumber myGame = new RandomNumber();//my class!!!!!!!!!!!!!!!!!!!
 	
 	for(int i=0;i < winArray.length;i++){
 			Scanner input = new Scanner(System.in);
-			int genNumber =myGame.GetANumber_Between_1_and_10();
 			
-		 System.out.print("Is the number between 0-10  odd(1) or even(2)?\n");		 
+			System.out.println("Set the limt so  0-x");
+			
+			high = input.nextInt();
+			int genNumber =myGame.GetANumber(high);
+			
+			
+			
+		 System.out.printf("Is the number between 0-%d  odd(1) or even(2)?\n",high);		 
 		 int choice = input.nextInt();
 
 		 System.out.printf("number is: %d\n", genNumber);//check 
